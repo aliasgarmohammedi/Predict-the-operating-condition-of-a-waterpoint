@@ -1,0 +1,34 @@
+<html>
+<body>
+    <h3>Pump Functional Status Analysis</h3>
+
+<div>
+  <form action="/Functional_status_prediction" method="POST">
+    <label for="age">Input Row Number from Test Set</label>
+    <input type="number" id="input_row_number" name="input_row_number">
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> Table </title>
+	</head>
+	<body>
+		<div align="center">
+			<table>
+				<h1>
+				<!--Displaying the converted table-->
+					{% for table in tables %}
+					<h2>{{titles[loop.index]}}</h2>
+					{{ table|safe }}
+					{% endfor %}
+				</h1>
+			</table>
+		</div>
+	</body>
+</html>
